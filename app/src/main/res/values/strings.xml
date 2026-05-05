@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">My Tic-Tac-Toe</string>
+    <string name="title_settings">Настройки</string>
+    <string name="title_new_game">Новая игра</string>
+    <string name="title_continue_game">Продолжить игру</string>
+    <string name="title_placeholder">Пока что тут ничего нет, но скоро будет :) </string>
+
 </resources>
