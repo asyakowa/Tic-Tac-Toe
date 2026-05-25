@@ -6,4 +6,5 @@
     <color name="brown">#9A6953</color>
     <color name="blue">#5BD1F6</color>
     <color name="red">#F65B5B</color>
+    <color name="transparent">#00000000</color>
 </resources>
