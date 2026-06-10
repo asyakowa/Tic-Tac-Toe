@@ -14,4 +14,5 @@
     <string name="lvl_easy">Легко</string>
     <string name="lvl_normal">Нормально</string>
     <string name="lvl_hard">Сложно</string>
+    <string name="your_move">Сейчас ваш ход</string>
 </resources>
