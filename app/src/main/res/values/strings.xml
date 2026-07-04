@@ -15,4 +15,11 @@
     <string name="lvl_normal">Нормально</string>
     <string name="lvl_hard">Сложно</string>
     <string name="your_move">Сейчас ваш ход</string>
+    <string name="menu">Меню</string>
+    <string name="Continue">Продолжить</string>
+    <string name="save_exit">Сохранить и выйти</string>
+    <string name="you_win">Вы выиграли!</string>
+    <string name="you_lose">Вы проиграли!</string>
+    <string name="draw">Ничья</string>
+    <string name="ОК">ОК</string>
 </resources>
