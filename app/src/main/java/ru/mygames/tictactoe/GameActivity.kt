@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import ru.mygames.tictactoe.databinding.GameActivityBinding
+import ru.mygames.tictactoe.databinding.PopupMenuBinding
 
 class GameActivity  : AppCompatActivity() {
 
@@ -15,16 +16,31 @@ class GameActivity  : AppCompatActivity() {
         binding = GameActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.returnButton.setOnClickListener {
-            val intent = Intent(this, StartActivity::class.java)
-            startActivity(intent)
+            finish()
         }
         binding.menuButton.setOnClickListener {
-            val dialogView = layoutInflater.inflate(R.layout.popup_menu, null)
+            val popupBinding = PopupMenuBinding.inflate(layoutInflater)
+
             val dialog = androidx.appcompat.app.AlertDialog.Builder(this)
-                .setView(dialogView)
+                .setView(popupBinding.root)
                 .create()
             dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
             dialog.show()
+            popupBinding.continueBtn.setOnClickListener {
+                dialog.dismiss()
+            }
+
+            popupBinding.settingsBtn.setOnClickListener {
+                dialog.dismiss()
+                val intent = Intent(this, SettingsActivity::class.java)
+                startActivity(intent)
+            }
+
+            popupBinding.saveExitBtn.setOnClickListener {
+                dialog.dismiss()
+                finish()
+            }
+
         }
 
     }
