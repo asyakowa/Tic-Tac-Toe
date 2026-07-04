@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/gameActivityXML"
+    android:background="@color/yellow"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/return_button"
+        android:background="@drawable/style_cross_button"
+        android:layout_width="40dp"
+        app:tint="@color/white"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/cross_game_activity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:background="@drawable/style_cross_button"
+        app:tint="@color/white"
+        android:backgroundTint="@color/blue"
+        android:layout_marginEnd="16dp"
+        android:id="@+id/menu_button"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_menu"
+        app:layout_constraintBottom_toBottomOf="@+id/return_button"
+        app:layout_constraintTop_toTopOf="@+id/return_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <Chronometer
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="16dp"
+        android:id="@+id/chronometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:text="0:00"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/return_button"
+        app:layout_constraintEnd_toStartOf="@id/menu_button"
+        android:textColor="@color/black"
+        android:textSize="18sp">
+    </Chronometer>
+
+    <TextView
+        android:id="@+id/your_move"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/your_move"
+        android:textColor="#B8B8B8"
+        android:paddingTop="3dp"
+        android:gravity="center_horizontal"
+        android:layout_marginStart="32dp"
+        app:layout_constraintEnd_toStartOf="@id/menu_button"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="21dp"
+        android:background="@drawable/style_your_move"
+         android:textSize="19sp"
+        android:fontFamily="@font/roboto"
+        app:layout_constraintStart_toEndOf="@id/return_button"
+        app:layout_constraintTop_toBottomOf="@id/chronometer"
+        ></TextView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/game_field"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="140dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/style_gamefield"
+        android:padding="8dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/your_move">
+
+        <ImageView
+            android:id="@+id/cell_0_0"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginBottom="3dp"
+            android:background="@drawable/rounded_cross"
+            app:layout_constraintBottom_toTopOf="@id/cell_1_0"
+            app:layout_constraintEnd_toStartOf="@id/cell_0_1"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintVertical_weight="1"
+            app:srcCompat="@drawable/cross" />
+
+        <ImageView
+            android:id="@+id/cell_0_1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginBottom="3dp"
+            android:background="@drawable/rounded_cross"
+            app:layout_constraintBottom_toTopOf="@id/cell_1_1"
+            app:layout_constraintEnd_toStartOf="@id/cell_0_2"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@id/cell_0_0"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_weight="1"
+            app:srcCompat="@drawable/zero" />
+
+        <ImageView
+            android:id="@+id/cell_0_2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginBottom="3dp"
+            android:background="@drawable/rounded_cross"
+            app:layout_constraintBottom_toTopOf="@id/cell_1_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@id/cell_0_1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_weight="1"
+            app:srcCompat="@drawable/cross" />
+
+        <ImageView
+            android:id="@+id/cell_1_0"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginBottom="3dp"
+            android:background="@drawable/rounded_cross"
+            app:layout_constraintBottom_toTopOf="@id/cell_2_0"
+            app:layout_constraintEnd_toStartOf="@id/cell_1_1"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cell_0_0"
+            app:layout_constraintVertical_weight="1"
+            app:srcCompat="@drawable/cross" />
+
+        <ImageView
+            android:id="@+id/cell_1_1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/rounded_cross"
+            app:layout_constraintBottom_toTopOf="@id/cell_2_1"
+            app:layout_constraintEnd_toStartOf="@id/cell_1_2"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@id/cell_1_0"
+            app:layout_constraintTop_toBottomOf="@id/cell_0_1"
+            app:layout_constraintVertical_weight="1"
+            app:srcCompat="@drawable/cross" />
+
+        <ImageView
+            android:id="@+id/cell_1_2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:background="@drawable/rounded_cross"
+            app:layout_constraintBottom_toTopOf="@id/cell_2_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@id/cell_1_1"
+            app:layout_constraintTop_toBottomOf="@id/cell_0_2"
+            app:layout_constraintVertical_weight="1"
+            app:srcCompat="@drawable/cross" />
+
+        <ImageView
+            android:id="@+id/cell_2_0"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="3dp"
+            android:background="@drawable/rounded_cross"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/cell_2_1"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cell_1_0"
+            app:layout_constraintVertical_weight="1"
+            app:srcCompat="@drawable/cross" />
+
+        <ImageView
+            android:id="@+id/cell_2_1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="3dp"
+            android:background="@drawable/rounded_cross"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/cell_2_2"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@id/cell_2_0"
+            app:layout_constraintTop_toBottomOf="@id/cell_1_1"
+            app:layout_constraintVertical_weight="1"
+            app:srcCompat="@drawable/cross" />
+
+        <ImageView
+            android:id="@+id/cell_2_2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/rounded_cross"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@id/cell_2_1"
+            app:layout_constraintTop_toBottomOf="@id/cell_1_2"
+            app:layout_constraintVertical_weight="1"
+            app:srcCompat="@drawable/cross" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

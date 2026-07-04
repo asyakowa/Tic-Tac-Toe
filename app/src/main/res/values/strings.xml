@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">My Tic-Tac-Toe</string>
+    <string name="title_settings">Настройки</string>
+    <string name="title_new_game">Новая игра</string>
+    <string name="title_continue_game">Продолжить игру</string>
+    <string name="title_placeholder">Пока что тут ничего нет, но скоро будет :) </string>
+    <string name="sound_text">Звук</string>
+    <string name="title_complexity">Сложность</string>
+    <string name="title_winrules">Правила победы</string>
+    <string name="title_return">Вернуться</string>
+    <string name="row_vertically">Ряд по вертикали</string>
+    <string name="row_horizontally">Ряд по горизонтали</string>
+    <string name="row_diagonal">Ряд по диагонали</string>
+    <string name="lvl_easy">Легко</string>
+    <string name="lvl_normal">Нормально</string>
+    <string name="lvl_hard">Сложно</string>
+    <string name="your_move">Сейчас ваш ход</string>
+    <string name="menu">Меню</string>
+    <string name="Continue">Продолжить</string>
+    <string name="save_exit">Сохранить и выйти</string>
+    <string name="you_win">Вы выиграли!</string>
+    <string name="you_lose">Вы проиграли!</string>
+    <string name="draw">Ничья</string>
+    <string name="ОК">ОК</string>
 </resources>
