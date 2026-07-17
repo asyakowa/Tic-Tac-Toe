@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/gameActivityXML"
     android:background="@color/yellow"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <TextView
         android:id="@+id/title_settings"
@@ -167,11 +167,12 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_return_to_start_activity"
-        android:layout_width="344dp"
-        android:layout_height="55dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="55dp"
         android:layout_marginEnd="32dp"
+        android:layout_marginBottom="45dp"
         android:background="@drawable/style_button"
         android:fontFamily="@font/roboto_light"
         android:text="@string/title_return"
@@ -179,6 +180,8 @@
         android:textSize="24sp"
         app:backgroundTint="@null"
         android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/checkbox_diagonal" />
 
